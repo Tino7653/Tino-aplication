@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script3.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body  class="custom-body">
+    <div class="custom-container">
+        <!-- Header -->
+        <header class="custom-header">
+          <h1 class="custom-title">TaskMaster</h1>
+          <p class="custom-subtitle">Votre gestionnaire d'événements et tâches intelligent</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="custom-grid">
+            <div class="form-container">
+
+               <h2 class="form-title">Ajouter un événement</h2>
+               <form id="taskForm" class="form">
+                 <div>
+                   <label for="taskName" class="form-label">Nom de la tâche</label>
+                   <input type="text" id="taskName" required class="form-input">
+                 </div>
+             
+                 <div>
+                   <label for="taskDate" class="form-label">Date et heure</label>
+                   <input type="datetime-local" id="taskDate" required class="form-input">
+                 </div>
+             
+                 <div>
+                   <label for="taskPriority" class="form-label">Priorité</label>
+                   <select id="taskPriority" class="form-input">
+                     <option value="low">Faible</option>
+                     <option value="medium" selected>Moyenne</option>
+                     <option value="high">Haute</option>
+                   </select>
+                 </div>
+             
+                 <div>
+                   <label for="taskDescription" class="form-label">Description</label>
+                   <textarea id="taskDescription" rows="3" class="form-input"></textarea>
+                 </div>
+             
+                 <button type="submit" class="submit-button">
+                   <i class="fas fa-plus-circle icon"></i> Ajouter la tâche
+                 </button>
+               </form>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list-container">
+              <div class="task-list-header">
+                <h2 class="task-list-title">Mes tâches</h2>
+                <div class="filter-buttons">
+                  <button id="filterAll" class="filter-btn filter-all">Toutes</button>
+                  <button id="filterActive" class="filter-btn filter-active">Actives</button>
+                  <button id="filterCompleted" class="filter-btn filter-completed">Terminées</button>
+                </div>
+              </div>
+            
+              <div id="taskList" class="task-list-content">
+                <!-- Les tâches seront ajoutées ici de manière dynamique -->
+                <div class="empty-state" id="emptyState">
+                  <i class="fas fa-tasks empty-icon"></i>
+                  <p>Aucune tâche pour le moment</p>
+                  <p class="empty-subtext">Ajoutez votre première tâche en utilisant le formulaire</p>
+                </div>
+              </div>
+            
+              <div class="task-list-footer">
+                <span id="taskCount">0 tâche(s)</span>
+                <button id="clearCompleted" class="clear-btn">Supprimer terminées</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Success Notification -->
+    <div id="successNotification" class="notification-container hidden">
+      <div class="notification-message">
+        <i class="fas fa-check-circle notification-icon"></i>
+        <span id="successMessage">Tâche complétée avec succès!</span>
+      </div>
+    </div>
+</body>
+</html>

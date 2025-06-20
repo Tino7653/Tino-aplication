@@ -1,0 +1,398 @@
+/* Utiliser Tailwind via CDN ou compilation si nécessaire */
+/* Remplace les classes utilitaires par leurs équivalents personnalisés */
+
+.custom-body {
+  background-color: #f7fafc; 
+  min-height: 100vh; 
+}
+
+.custom-container {
+  max-width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;  
+  padding-right: 1rem;
+  padding-top: 2rem;   
+  padding-bottom: 2rem;
+}
+
+
+
+.custom-header {
+  margin-bottom: 2rem;      
+  text-align: center;
+}
+
+.custom-title {
+  font-size: 2.25rem;       
+  font-weight: 700;    
+  color: #1f2937;      
+  margin-bottom: 0.5rem;    
+}
+
+.custom-subtitle {
+  color: #718096;     
+}
+
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1fr;        
+  gap: 1.5rem;                       
+
+  /* Comportement responsive pour les grands écrans (lg:grid-cols-3) */
+}
+
+@media (min-width: 1024px) {
+  .custom-grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+
+
+
+
+.form-container {
+  background-color: #ffffff;         
+  border-radius: 0.5rem;    
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 1.5rem;                  
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    grid-column: span 1;           
+  }
+}
+
+.form-title {
+  font-size: 1.25rem;      
+  font-weight: 600;       
+  margin-bottom: 1rem;           
+  color: #4f46e5;      
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;      
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem; 
+  font-weight: 500;      
+  color: #4b5563;    
+  margin-bottom: 0.25rem;     
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;        
+  border: 1px solid #d1d5db;     
+  border-radius: 0.375rem;       
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px #6366f1;    
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #374151;       
+  color: #ffffff;
+  padding: 0.5rem 1rem;           
+  border-radius: 0.375rem;       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #1f2937;       
+}
+
+.icon {
+  margin-right: 0.5rem;           
+}
+
+
+
+
+.task-list-container {
+  background-color: #ffffff;         
+  border-radius: 0.5rem;     
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 1.5rem;               
+}
+
+@media (min-width: 1024px) {
+  .task-list-container {
+    grid-column: span 2;          
+  }
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;           
+}
+
+.task-list-title {
+  font-size: 1.25rem;            
+  font-weight: 600;          
+  color: #4f46e5;       
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;       
+}
+
+.filter-btn {
+  padding: 0.25rem 0.75rem;     
+  border-radius: 0.375rem;    
+  font-size: 0.875rem;         
+  font-weight: 500;       
+}
+
+.filter-all {
+  background-color: #e0e7ff;    
+  color: #4338ca;        
+}
+
+.filter-active,
+.filter-completed {
+  background-color: #f3f4f6;  
+  color: #374151;              
+}
+
+.task-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;            
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 0;          
+  color: #6b7280;           
+}
+
+.empty-icon {
+  font-size: 2.25rem;         
+  margin-bottom: 0.75rem;    
+  color: #d1d5db;       
+}
+
+.empty-subtext {
+  font-size: 0.875rem;        
+  margin-top: 0.25rem;    
+}
+
+.task-list-footer {
+  margin-top: 1.5rem;      
+  padding-top: 1rem;       
+  border-top: 1px solid #e5e7eb; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;      
+  color: #4b5563;      
+}
+
+.clear-btn {
+  color: #4f46e5;        
+  transition: color 0.2s ease;
+}
+
+.clear-btn:hover {
+  color: #3730a3;         
+}
+
+
+
+.notification-container {
+  position: fixed;
+  bottom: 1rem;        
+  right: 1rem;       
+  z-index: 9999;
+}
+
+.notification-message {
+  background-color: #374151;    
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;     
+  border-radius: 0.5rem;     
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  margin-right: 0.5rem;      
+  font-size: 1.25rem;   
+}
+
+
+
+.task-item {
+  background-color: #ffffff;       
+  border: 1px solid #e5e7eb;        
+  border-radius: 0.375rem;          
+  padding: 1rem;                  
+  transition: all 0.2s ease-in-out;   
+}
+
+.task-item.completed {
+  opacity: 0.7;
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.task-left {
+  display: flex;
+  flex: 1;
+  gap: 0.75rem;        
+  align-items: start;
+}
+
+.complete-btn {
+  margin-top: 0.25rem;     
+  color: #d1d5db;         
+  transition: color 0.2s;
+}
+
+.complete-btn:hover {
+  color: #22c55e;            
+}
+
+.complete-btn.complete-checked {
+  color: #22c55e;                   
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-title {
+  font-weight: 500;
+  color: #1f2937;                
+}
+
+.task-title.task-done {
+  text-decoration: line-through;
+  color: #6b7280;         
+}
+
+.task-date {
+  font-size: 0.875rem;
+  color: #4b5563;             
+  margin-top: 0.25rem;
+}
+
+.task-description {
+  font-size: 0.875rem;
+  color: #6b7280;                
+  margin-top: 0.5rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;             
+}
+
+.delete-btn {
+  color: #9ca3af;          
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #ef4444;              
+}
+
+.task-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;         
+  color: #6b7280;        
+}
+
+.priority-badge {
+  padding: 0.25rem 0.5rem;     
+  border-radius: 9999px;       
+}
+
+/* Exemple de couleurs personnalisées */
+.priority-low {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.priority-medium {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.priority-high {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.task-time {
+  margin-left: auto;
+}
+
+
+
+.filter-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #f3f4f6; 
+  color: #374151;      
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.filter-btn.active-filter {
+  background-color: #e0e7ff; 
+  color: #4338ca;      
+}
+
+.btn-default {
+  background-color: #f3f4f6; 
+  color: #374151;    
+}
+
+
+.priority-high {
+  background-color: #fee2e2; 
+  color: #991b1b;      
+}
+
+.priority-medium {
+  background-color: #fef9c3; 
+  color: #92400e;    
+}
+
+.priority-low {
+  background-color: #d1fae5;
+  color: #065f46;      
+}
