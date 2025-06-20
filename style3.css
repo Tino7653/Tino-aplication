@@ -8,12 +8,27 @@
 
 .custom-container {
   max-width: 100%; 
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;  
-  padding-right: 1rem;
-  padding-top: 2rem;   
-  padding-bottom: 2rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header1 {
+    width: 100%;
+    padding: 20px 20%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links ul  {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-links a {
+    color: gray;
+    font-weight: 600;
 }
 
 
